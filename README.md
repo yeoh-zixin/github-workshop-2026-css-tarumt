@@ -1,354 +1,138 @@
-# GitHub Workshop 2026 CSS TAR UMT
+# GitHub Workshop 2026 CRUD Demo
 
-This is a demo repository for **GitHub Workshop 2026**, hosted by **Computer Science Society TAR UMT**.
+A simple local-only student record management website for GitHub Workshop 2026. It is built for teaching repository structure, `.gitignore`, releases, README files, and basic web project organization.
 
-This repository is used as a reference to show how a `README.md` file can be written properly using **Markdown** and simple **HTML**.
+This project uses only:
+- HTML
+- CSS
+- Bootstrap 5
+- Vanilla JavaScript
+- `localStorage`
 
----
-
-## What is a README?
-
-A `README.md` file is usually the first page people see when they open a GitHub repository.
-
-A good README helps people understand:
-
-* What the project is about
-* How to install or run the project
-* What features are included
-* Who contributed to the project
-* Where to find important files or releases
-
----
-
-## 1. Markdown Headings
-
-Markdown uses `#` symbols to create headings.
-
-```md
-# Heading 1
-## Heading 2
-### Heading 3
-#### Heading 4
-```
-
-Example:
-
-# Heading 1
-
-## Heading 2
-
-### Heading 3
-
----
-
-## 2. Text Formatting
-
-Markdown can be used to format text easily.
-
-```md
-**Bold text**
-
-*Italic text*
-
-~~Strikethrough text~~
-
-`Inline code`
-```
-
-Example:
-
-**Bold text**
-
-*Italic text*
-
-~~Strikethrough text~~
-
-`Inline code`
-
----
-
-## 3. Lists
-
-### Unordered List
-
-```md
-- Create repository
-- Create branch
-- Create pull request
-- Merge pull request
-```
-
-Example:
-
-* Create repository
-* Create branch
-* Create pull request
-* Merge pull request
-
-### Ordered List
-
-```md
-1. Create a repository
-2. Add project files
-3. Commit changes
-4. Push to GitHub
-```
-
-Example:
-
-1. Create a repository
-2. Add project files
-3. Commit changes
-4. Push to GitHub
-
----
-
-## 4. Links
-
-You can add links using Markdown.
-
-```md
-[Visit GitHub](https://github.com)
-```
-
-Example:
-
-[Visit GitHub](https://github.com)
-
----
-
-## 5. Images
-
-Images can be added using Markdown.
-
-```md
-![TAR UMT Intranet Background](https://www.tarc.edu.my/assets/css/images/bg3.jpg)
-```
-
-Example:
-
-![TAR UMT Intranet Background](https://www.tarc.edu.my/assets/css/images/bg3.jpg)
-
-> Recommended folder structure:
-
-```txt
-github-workshop-2026/
-├── README.md
-├── assets/
-│   └── workshop-banner.png
-└── src/
-```
-
----
-
-## 6. Tables
-
-Tables are useful for showing project information clearly.
-
-```md
-| Topic | Description |
-|---|---|
-| Repository | A place to store project files |
-| Branch | A separate version of the project |
-| Pull Request | A request to merge changes |
-| Release | A published version of the project |
-```
-
-Example:
-
-| Topic        | Description                        |
-| ------------ | ---------------------------------- |
-| Repository   | A place to store project files     |
-| Branch       | A separate version of the project  |
-| Pull Request | A request to merge changes         |
-| Release      | A published version of the project |
-
----
-
-## 7. Code Blocks
-
-Use code blocks to show commands or source code.
-
-### Example: Git command
-
-```bash
-git status
-git add .
-git commit -m "Update README"
-git push
-```
-
-### Example: HTML code
-
-```html
-<h1>Hello GitHub</h1>
-<p>This is written using HTML.</p>
-```
-
----
-
-## 8. Task Lists
-
-Task lists are useful for tracking project progress.
-
-```md
-- [x] Create repository
-- [x] Add README
-- [ ] Create branch
-- [ ] Open pull request
-- [ ] Create release
-```
-
-Example:
-
-* [x] Create repository
-* [x] Add README
-* [ ] Create branch
-* [ ] Open pull request
-* [ ] Create release
-
----
-
-# Using HTML in README
-
-GitHub README also supports some basic HTML. This is useful when Markdown is not enough.
-
----
-
-## 9. Center an Image using HTML
-
-```html
-<p align="center">
-  <img src="https://www.tarc.edu.my/assets/css/images/bg3.jpg" alt="" width="600">
-</p>
-```
-
-Example:
-
-<p align="center">
-  <img src="https://www.tarc.edu.my/assets/css/images/bg3.jpg" alt="" width="600">
-</p>
-
----
-
-## 10. Resize an Image
-
-Markdown does not directly support image resizing, so HTML is useful here.
-
-```html
-<img src="https://www.tarc.edu.my/assets/css/images/bg3.jpg" alt="" width="200">
-```
-
-Example:
-
-<img src="https://www.tarc.edu.my/assets/css/images/bg3.jpg" alt="" width="200">
-
----
-
-## 11. Dropdown Section using HTML
-
-The `<details>` tag can be used to hide and show extra information.
-
-```html
-<details>
-  <summary>Click to view GitHub workflow</summary>
-
-  1. Create a branch  
-  2. Make changes  
-  3. Open a Pull Request  
-  4. Review changes  
-  5. Merge into main  
-
-</details>
-```
-
-Example:
-
-<details>
-  <summary>Click to view GitHub workflow</summary>
-
-1. Create a branch
-2. Make changes
-3. Open a Pull Request
-4. Review changes
-5. Merge into main
-
-</details>
-
----
-
-# Example Assignment README Template
-
-Students can use this structure for their own assignment project.
-
-```md
-# Project Name
-
-## Project Description
-
-Briefly explain what the project is about.
+It does not use a backend server, database, Node.js, npm build tools, or front-end frameworks.
 
 ## Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Admin login
+- Student login
+- Admin CRUD for student records
+- Student view-only dashboard
+- Programme list loaded from `config/programmes.json`
+- Password generator for new student accounts
+- CSV export including passwords
+- Automatic local demo data seeding
+- Demo reset function
+- Optional batch script for generating random admin credentials
 
-## Technologies Used
+## Demo Credentials
 
-- HTML
-- CSS
-- JavaScript
-- GitHub
+Default admin:
+- Username: `admin`
+- Password: `admin123`
 
-## Installation
+Default student:
+- Student ID: `25WMR00001`
+- Password: `student123`
 
-Explain how to install or set up the project.
+Default student record:
+- Name: `Ali Tan`
+- Programme: `Diploma in Computer Science`
+- Group: `DCS1A`
 
-## Usage
+If you run `scripts/generate_random_id.bat`, the project can also read the generated local admin credential file at `config/admin.generated.json` when it exists.
 
-Explain how to run or use the project.
+## Folder Structure
 
-## Screenshots
-
-Add screenshots of the project here.
-
-## Team Members
-
-| Name | Role |
-|---|---|
-| Student A | Project Leader |
-| Student B | Developer |
-| Student C | Documentation |
-
-## Release
-
-The final version of this project can be downloaded from the GitHub Releases section.
+```text
+github-workshop-crud-demo/
+├── index.html
+├── README.md
+├── .gitignore
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       ├── app.js
+│       ├── auth.js
+│       ├── storage.js
+│       ├── ui.js
+│       └── csv.js
+├── config/
+│   ├── initialize.js
+│   ├── programmes.json
+│   ├── demo-users.json
+│   └── admin.generated.json
+└── scripts/
+    └── generate_random_id.bat
 ```
 
----
+## How It Works
 
-# Good README Tips
+The application stores users and student records in `localStorage` using keys such as:
+- `gw2026_users`
+- `gw2026_students`
+- `gw2026_current_user`
+- `gw2026_initialized`
 
-A good README should be:
+The file `config/initialize.js` seeds the default admin and student data once, then sets the initialization flag so the demo data is not duplicated on reload.
 
-* Clear and easy to read
-* Not too empty
-* Not too messy
-* Updated when the project changes
-* Useful for both team members and lecturers
+## How To Run Locally
 
----
+Because the project loads `config/programmes.json` with `fetch()`, open it using a local static server. If you open `index.html` directly and your browser blocks JSON loading, use one of these options:
 
-# Practice Activity
+- VS Code Live Server
+- Any simple static file server
 
-Try to edit this README by adding:
+## .gitignore Demo
 
-* Your name
-* One image
-* One table
-* One code block
-* One task list
-* One HTML image with custom width
+This project ignores `config/admin.generated.json` so each workshop participant can generate their own local admin credentials without committing them.
 
-After editing, commit your changes and create a Pull Request.
+Ignored examples:
+- `config/admin.generated.json`
+- `.DS_Store`
+- `Thumbs.db`
+- `*.log`
+
+## Generate Random Admin Credentials
+
+Run:
+
+```bat
+scripts\generate_random_id.bat
+```
+
+This creates `config/admin.generated.json` with local admin credentials in a format similar to:
+
+```json
+{
+  "adminId": "ADM48291",
+  "adminName": "Workshop Admin 48291",
+  "username": "admin48291",
+  "password": "GH-ADM-48291"
+}
+```
+
+## Reset Demo Data
+
+The admin dashboard includes a reset button that calls `resetDemoData()` and restores the default localStorage data.
+
+## GitHub Release Demo
+
+A simple release flow for this workshop project:
+
+1. Commit your changes to the repository.
+2. Create a tag such as `v1.0.0`.
+3. Open the repository on GitHub.
+4. Go to **Releases**.
+5. Click **Draft a new release**.
+6. Choose the tag.
+7. Write release notes that explain what the demo contains.
+8. Publish the release.
+
+This is a good way to show how GitHub releases package a teaching demo separately from the source code.
+
+## Notes
+
+- This authentication is only for workshop learning.
+- Do not use this code for production security.
+- Student passwords are intentionally included in CSV export for demo purposes.

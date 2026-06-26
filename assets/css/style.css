@@ -1,0 +1,110 @@
+:root {
+  --gw-bg-start: #f4f7fb;
+  --gw-bg-end: #e9eef7;
+  --gw-ink: #142033;
+  --gw-accent: #0b6efd;
+  --gw-accent-soft: rgba(11, 110, 253, 0.12);
+  --gw-panel: rgba(255, 255, 255, 0.88);
+  --gw-border: rgba(20, 32, 51, 0.08);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+  color: var(--gw-ink);
+  background:
+    radial-gradient(circle at top left, rgba(11, 110, 253, 0.14), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(20, 184, 166, 0.12), transparent 28%),
+    linear-gradient(180deg, var(--gw-bg-start), var(--gw-bg-end));
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.hero-panel {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(245, 248, 255, 0.92));
+  border: 1px solid var(--gw-border);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: var(--gw-accent-soft);
+  color: var(--gw-accent);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.surface-card {
+  border: 1px solid var(--gw-border);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  background: var(--gw-panel);
+}
+
+.table thead th {
+  background: #f8faff;
+  color: #334155;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+}
+
+.table tbody tr:hover {
+  background: rgba(11, 110, 253, 0.04);
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.page-title {
+  letter-spacing: -0.03em;
+}
+
+.mini-muted {
+  color: #64748b;
+}
+
+.dashboard-nav {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--gw-border);
+}
+
+.detail-list dt {
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.detail-list dd {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.code-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  background: rgba(15, 23, 42, 0.06);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 767px) {
+  .hero-panel,
+  .surface-card {
+    border-radius: 1rem;
+  }
+}

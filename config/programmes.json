@@ -1,0 +1,14 @@
+[
+  {
+    "code": "DCS",
+    "name": "Diploma in Computer Science"
+  },
+  {
+    "code": "DIS",
+    "name": "Diploma in Information Systems"
+  },
+  {
+    "code": "RSD",
+    "name": "Bachelor of Software Engineering"
+  }
+]
